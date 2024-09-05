@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="icon" type="image/x-icon" href="assets/css/images/apple.svg">
+	<title>Ayse Uyar | QA Engineer</title>
+	<meta charset="utf-8" />
+	<meta name="description" content="Ayse Uyar QA Engineer">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="assets/css/cssshake-min.css" />
+	<link rel="stylesheet" href="assets/css/star.css" />
+	<script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+		integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+	<script>
+		var firstClick = false
+		document.onclick = function (event) {
+			if (firstClick == false) {
+				var audio = document.createElement("AUDIO")
+				audio.setAttribute('id', 'audioId');
+				document.body.appendChild(audio);
+				audio.src = "startup.mp3"
+				audio.play()
+			}
+			firstClick = true
+		}
+	</script>
+</head>
+
+<body class="is-preload">
+	<div id="wrapper">
+		<div class="stars" aria-hidden="true"></div>
+		<div class="stars2" aria-hidden="true"></div>
+		<div class="stars3" aria-hidden="true"></div>
+		<div id="bg"></div>
+		<div id="main">
+			<!-- Header -->
+			<header id="header">
+				<h1>Hi, I'm Ayse! <img
+						class="handwave constant-tilt-shake" src="assets/css/images/wavinghand.png" /></h1>
+				<p><i class="icon brands fa-apple fa-lg"></i> QA Engineer</p>
+				<div class="toggleButton">
+					<label class="centered-text">Some works examples &nbsp;</label>
+					<label class="toggle">
+						<input type="checkbox" id="portfolioToggle" checked>
+						<span class="slider"></span>
+					</label>
+				</div>
+				<nav>
+					<ul>
+						<li><a href="https://github.com/AyseUyar" target="_blank"
+								class="icon brands fa-github"><span>GitHub</span></a></li>
+						<li><a href="https://www.linkedin.com/in/ayseuyar" target="_blank"
+								class="icon brands fa-linkedin"><span>LinkedIn</span></a></li>
+						<li><a href="https://stackoverflow.com/users/2551351/AyseUyar" target="_blank"
+								class="icon brands fa-stack-overflow"><span>Stack Overflow</span></a></li>
+						<li><a href="https://www.hackerrank.com/AyseUyar" target="_blank"
+								class="icon brands fa-hackerrank"><span>Hackerrank</span></a></li>
+						<li><a href="https://mailhide.io/e/UCZVdhHV" target="_blank"
+								class="icon fa-solid fa-envelope"><span>E-mail</span></a></li>
+
+					</ul>
+				</nav>
+				<nav>
+					<ul>
+						<li><a href="https://open.spotify.com/user/AyseUyar" target="_blank"
+								class="icon brands fa-spotify"><span>Spotify</span></a></li>
+						<li><a href="https://www.twitch.tv/AyseUyar" target="_blank"
+								class="icon brands fa-twitch"><span>Twitch</span></a></li>
+						<li><a href="https://mastodon.social/@AyseUyar" target="_blank"
+								class="icon brands fa-mastodon"><span>Mastodon.social</span></a></li>
+						<li><a href="https://www.twitter.com/AyseUyar" target="_blank"
+								class="icon brands fa-twitter"><span>Twitter</span></a></li>
+						<li><a href="https://www.goodreads.com/AyseUyar" target="_blank"
+								class="icon brands fa-goodreads"><span>Goodreads</span></a></li>
+					</ul>
+				</nav>
+			</header>
+		</div>
+	</div>
+	<script>
+		$(document).ready(function () {
+			$('#portfolioToggle').change(function () {
+				$(".app").toggle(3000);
+			});
+		});
+		document.addEventListener('DOMContentLoaded', () => {
+			const appsElements = document.querySelectorAll('.app');
+			appsElements.forEach((appElement) => {
+				appElement.addEventListener('mouseenter', () => {
+					appElement.style.animationPlayState = 'paused';
+				});
+
+				appElement.addEventListener('mouseleave', () => {
+					appElement.style.animationPlayState = 'running';
+				});
+			});
+		});
+		window.onload = function () { document.body.classList.remove('is-preload'); }
+		window.ontouchmove = function () { return false; }
+		window.onorientationchange = function () { document.body.scrollTop = 0; }
+	</script>
+</body>
+
+</html>
